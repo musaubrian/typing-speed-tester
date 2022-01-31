@@ -1,3 +1,1 @@
-Testing this texts file.
-What is up can you type this fast.
-Hello world, python gui here.
+this is a bunch of texts in the text filec hello, world my name is Ernest.
