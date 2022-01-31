@@ -1,14 +1,14 @@
-from pickle import FALSE
 import tkinter as tk
 import time
 import threading
 import random
+from tkinter.font import BOLD
 
 
 class TypingSpeedGui:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Typing Speed Application")
+        self.root.title("Typing Speed Application 💻")
         self.root.geometry("600x400")
 
         self.texts = open("./texts.txt", "r").read().split("\n")
@@ -28,8 +28,8 @@ class TypingSpeedGui:
         self.speed_label.grid(row=2, column=0, columnspan=2, padx=5, pady=10)
 
         self.reset_button = tk.Button(
-            self.frame, text="Reset", command=self.reset)
-        self.reset_button.grid(row=3, column=0, columnspan=3, padx=5, pady=10)
+            self.frame, text="Reset", command=self.reset, font=("Arial", 20, BOLD))
+        self.reset_button.grid(row=3, column=0, columnspan=2, padx=5, pady=10)
 
         self.frame.pack(expand=True)
 
@@ -58,7 +58,7 @@ class TypingSpeedGui:
     def reset(self):
         self.isRunning = False
         self.counter = 0
-        self.speed_label.config(text="Speed: \n 0.00CPS\n")
+        self.speed_label.config(text="Speed: \n 0.00CPM\n0.00WPM")
         self.sample_label.config(text=random.choice(self.texts))
         self.input_entry.delete(0, tk.END)
 
