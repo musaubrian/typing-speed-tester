@@ -16,7 +16,7 @@ class TypingSpeedGui:
         self.frame = tk.Frame(self.root)
 
         self.sample_label = tk.Label(
-            self.frame, text=random.choice(self.texts), font=("Arial", 18))
+            self.frame, text=random.choice(self.texts), font=("Arial", 16))
         self.sample_label.grid(row=0, column=0, columnspan=2, padx=5, pady=10)
 
         self.input_entry = tk.Entry(self.frame, width=30, font=("Arial", 20))
@@ -24,7 +24,7 @@ class TypingSpeedGui:
         self.input_entry.bind("<KeyRelease>", self.start)
 
         self.speed_label = tk.Label(
-            self.frame, text="Speed: \n 0.00CPM\n 0.00WPM\n", font=("Arial", 18))
+            self.frame, text="Speed: \n 0.0CPM\n 0.0WPM\n", font=("Arial", 18))
         self.speed_label.grid(row=2, column=0, columnspan=2, padx=5, pady=10)
 
         self.reset_button = tk.Button(
@@ -58,7 +58,7 @@ class TypingSpeedGui:
     def reset(self):
         self.isRunning = False
         self.counter = 0
-        self.speed_label.config(text="Speed: \n 0.00CPM\n0.00WPM")
+        self.speed_label.config(text="Speed: \n 0.0CPM\n0.0WPM")
         self.sample_label.config(text=random.choice(self.texts))
         self.input_entry.delete(0, tk.END)
 
@@ -71,7 +71,7 @@ class TypingSpeedGui:
             WPS = len(self.input_entry.get().split(" ")) / self.counter
             WPM = WPS * 60
             self.speed_label.config(
-                text=f"Speed: \n{CPM:.2F} CPM\n{WPM:.2F} WPM")
+                text=f"Speed: \n{CPM:.1F} CPM\n{WPM:.1F} WPM")
 
 
 TypingSpeedGui()
