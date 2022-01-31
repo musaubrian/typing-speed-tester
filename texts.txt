@@ -1,1 +1,3 @@
-this is a bunch of texts in the text filec hello, world my name is Ernest.
+this is a bunch of texts in the text file.
+Hello world.
+My name is Ernest.
