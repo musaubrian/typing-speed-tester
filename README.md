@@ -4,4 +4,4 @@
     <hr width=80%/>
 </div>
 
-<p> Simple python gui application that measures a users typing speed in characters per second {cps} and characters per minute {cpm}</p>
+<p align=center> Simple python gui application that measures a users typing speed in characters per second {cps} and characters per minute {cpm}</p>
