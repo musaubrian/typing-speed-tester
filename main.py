@@ -51,7 +51,12 @@ class TypingSpeedGui:
             self.input_entry.config(fg="green")               
 
     def reset(self):
-        pass
+        self.isRunning =False
+        self.counter = 0
+        self.speed_label.config(text = "Speed: \n 0.00CPS\n 0.00CPM")
+        self.sample_label.config(text=random.choice(self.texts))
+        self.input_entry.delete(0, tk.End)
+
 
     def time_thread(self):
         while self.isRunning:
