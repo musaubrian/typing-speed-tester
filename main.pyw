@@ -4,7 +4,7 @@ import threading
 import random
 from tkinter.font import BOLD
 
-#comment added
+
 class TypingSpeedGui:
     def __init__(self):
         self.root = tk.Tk()
